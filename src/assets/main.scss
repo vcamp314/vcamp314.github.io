@@ -1,13 +1,16 @@
 // Customizations Here (Optional)
 
 // Bulma Import
-@import "../node_modules/bulma/sass/utilities/_all.sass";
-@import "../node_modules/bulma/sass/base/_all.sass";
-@import "../node_modules/bulma/sass/elements/button.sass";
-@import "../node_modules/bulma/sass/elements/container.sass";
-@import "../node_modules/bulma/sass/elements/title.sass";
-@import "../node_modules/bulma/sass/form/_all.sass";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-@import "../node_modules/bulma/sass/layout/hero.sass";
-@import "../node_modules/bulma/sass/layout/section.sass";
-@import "../node_modules/bulma/sass/helpers/typography.sass";
+/* stylelint-disable-next-line scss/at-import-no-partial-leading-underscore */
+@import "../node_modules/bulma/sass/utilities/_all";
+/* stylelint-disable-next-line scss/at-import-no-partial-leading-underscore */
+@import "../node_modules/bulma/sass/base/_all";
+@import "../node_modules/bulma/sass/elements/button";
+@import "../node_modules/bulma/sass/elements/container";
+@import "../node_modules/bulma/sass/elements/title";
+/* stylelint-disable-next-line scss/at-import-no-partial-leading-underscore */
+@import "../node_modules/bulma/sass/form/_all";
+@import "../node_modules/bulma/sass/components/navbar";
+@import "../node_modules/bulma/sass/layout/hero";
+@import "../node_modules/bulma/sass/layout/section";
+@import "../node_modules/bulma/sass/helpers/typography";

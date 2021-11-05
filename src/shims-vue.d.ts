@@ -1,6 +1,7 @@
-declare module "particles.vue3";
+declare module 'particles.vue3';
 declare module '*.vue' {
   import { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const component: DefineComponent<Record<string, unknown>, Record<string, unknown>, any>
   export default component
 }

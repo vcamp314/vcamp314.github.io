@@ -5,16 +5,16 @@ import { join } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  resolve: {
-    alias: {
-      "@": join(__dirname, "./src"),
-    },
-  },
-  plugins: [
-    vue(),
-    plugin({
-      generate: {
-      }
-    })
-  ]
+	resolve: {
+		alias: {
+			'@': join(__dirname, './src'),
+		},
+	},
+	plugins: [
+		vue(),
+		plugin({
+			generate: {
+			}
+		})
+	]
 })

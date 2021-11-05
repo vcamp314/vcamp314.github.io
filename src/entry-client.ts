@@ -1,10 +1,10 @@
 import App from './App.vue'
 import { createSSRApp, App as app } from 'vue'
 import {
-  createMemoryHistory,
-  createRouter,
-  createWebHistory,
-  Router
+	createMemoryHistory,
+	createRouter,
+	createWebHistory,
+	Router
 } from 'vue-router'
 import { getRoutes } from 'vite-plugin-ssr-ssg'
 import { createHead, HeadClient } from '@vueuse/head'
@@ -20,19 +20,19 @@ export const createApp = (): {
   router: Router
   head: HeadClient
 } => {
-  const app = createSSRApp(App)
-  const router = createRouter({
-    history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
-    routes
-  })
-  const head = createHead()
-  app.use(router).use(head).use(i18n).use(Particles)
-  return { app, router, head }
+	const app = createSSRApp(App)
+	const router = createRouter({
+		history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
+		routes
+	})
+	const head = createHead()
+	app.use(router).use(head).use(i18n).use(Particles)
+	return { app, router, head }
 }
 
 const { app, router } = createApp()
 
 router.isReady().then(() => {
-  app.mount('#app')
-  i18n.global.locale = navigator.language
+	app.mount('#app')
+	i18n.global.locale = navigator.language
 })

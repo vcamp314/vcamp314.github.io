@@ -95,10 +95,10 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-  title: 'Index'
+	title: 'Index'
 })
 </script>
-<style>
+<style scoped>
   #tsparticles {
     position: fixed;
     top: 0;
