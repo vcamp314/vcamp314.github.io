@@ -11,7 +11,8 @@
     "build": "vite-ssrg build",
     "generate": "vite-ssrg generate",
     "serve": "vite-ssrg preview",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^1.2.2",
@@ -54,5 +55,9 @@
     "vite": "^2.1.0",
     "vite-plugin-ssr-ssg": "^1.4.1",
     "vue-tsc": "^0.0.8"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix"
   }
 }
