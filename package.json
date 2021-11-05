@@ -12,7 +12,10 @@
     "generate": "vite-ssrg generate",
     "serve": "vite-ssrg preview",
     "test": "jest",
-    "prepare": "husky install"
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prettier:check": "prettier --check",
+    "prettier:fix": "prettier --write"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^1.2.2",
@@ -57,7 +60,11 @@
     "vue-tsc": "^0.0.8"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix"
+    "src/**/*.{js,ts,vue}": [
+      "eslint",
+      "prettier",
+      "jest"
+    ],
+    "src/**/*.{css,scss,sass}": "stylelint"
   }
 }
