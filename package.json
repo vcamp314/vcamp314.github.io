@@ -17,7 +17,7 @@
     "prettier:check": "prettier --check",
     "prettier:fix": "prettier --write",
     "predeploy": "npm run generate",
-    "deploy": "gh-pages -d "
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^1.2.2",
