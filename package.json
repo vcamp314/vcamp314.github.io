@@ -14,8 +14,8 @@
     "test": "jest",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "prettier:check": "prettier --check",
-    "prettier:fix": "prettier --write",
+    "prettier:check": "prettier --check ./src ",
+    "prettier:fix": "prettier --write ./src ",
     "predeploy": "npm run generate",
     "deploy": "gh-pages -d dist"
   },
