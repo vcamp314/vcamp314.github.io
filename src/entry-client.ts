@@ -33,6 +33,7 @@ export const createApp = (): {
 const { app, router } = createApp()
 
 router.isReady().then(() => {
+	app.use(gtm)
 	app.mount('#app')
 	i18n.global.locale = navigator.language
 })
