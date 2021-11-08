@@ -66,7 +66,7 @@
     "src/**/*.{js,ts,vue}": [
       "eslint",
       "prettier",
-      "jest"
+      "jest --passWithNoTests"
     ],
     "src/**/*.{css,scss,sass}": "stylelint"
   }
