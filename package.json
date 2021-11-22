@@ -69,5 +69,8 @@
       "jest --passWithNoTests"
     ],
     "src/**/*.{css,scss,sass}": "stylelint"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
