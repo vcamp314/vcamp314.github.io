@@ -2,7 +2,7 @@
   <section class="hero is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <p class="title">{{ $t("title") }}</p>
+        <p class="title has-text-primary">{{ $t("title") }}</p>
         <p class="subtitle">{{ $t("subtitle") }}</p>
       </div>
       <Particles
@@ -19,11 +19,16 @@
           events: {
             onClick: {
               enable: true,
-              mode: 'push'
+              mode: 'repulse'
             },
             onHover: {
               enable: true,
-              mode: 'repulse'
+              mode: ['grab'],
+              parallax: {
+                enable: true,
+                force: 8,
+                smooth: 10
+              }
             },
             resize: true
           },
@@ -35,35 +40,37 @@
               size: 40,
               speed: 3
             },
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 0.3
+              }
+            },
             push: {
               quantity: 4
             },
             repulse: {
-              distance: 120,
-              duration: 0.8
+              distance: 320,
+              duration: 2
             }
           }
         },
         particles: {
           color: {
-            value: '#000000'
+            value: ['#A6A6A6', '#85A68E']
           },
-          links: {
-            color: '#000000',
-            distance: 150,
+          line_linked: {
             enable: true,
-            opacity: 0.5,
-            width: 1
-          },
-          collisions: {
-            enable: true
+            distance: 150,
+            color: '#808080'
           },
           move: {
             direction: 'none',
             enable: true,
-            outMode: 'bounce',
+            outMode: 'out',
             random: false,
-            speed: 1,
+            speed: 0.7,
+            bounce: false,
             straight: false
           },
           number: {
@@ -71,17 +78,17 @@
               enable: true,
               value_area: 800
             },
-            value: 70
+            value: 90
           },
           opacity: {
-            value: 0.5
+            value: 1
           },
           shape: {
-            type: 'circle'
+            type: ['circle']
           },
           size: {
             random: true,
-            value: 5
+            value: 8
           }
         },
         detectRetina: true
