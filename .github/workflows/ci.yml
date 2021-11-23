@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
+        node: [17]
 
     steps:
       - name: Checkout 🛎
@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm i --prefer-offline --no-audit
+        run: npm ci --prefer-offline --no-audit
 
 
       - name: Run tests 🧪
