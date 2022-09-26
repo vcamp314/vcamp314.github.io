@@ -34,7 +34,7 @@
   "devDependencies": {
     "@testing-library/vue": "^6.4.2",
     "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.4",
+    "@types/node": "^18.7.21",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "@vitejs/plugin-vue": "^1.1.5",
